@@ -2,6 +2,9 @@
 
 ![Lobotomy Corp Bridge logo](logo.png)
 
+[![Mod Version](https://img.shields.io/github/v/release/Hawkbat/LobotomyBridgeMod)](https://github.com/Hawkbat/LobotomyBridgeMod/releases)
+[![NPM Version](https://img.shields.io/npm/v/lobotomy-corp-bridge)](https://www.npmjs.com/package/lobotomy-corp-bridge)
+
 A mod for the game Lobotomy Corporation that enables realtime control and data exchange with the game via WebSockets.
 
 ## License

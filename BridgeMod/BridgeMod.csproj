@@ -85,11 +85,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BridgeMod.csproj.user" />
+    <Content Include="Info\en\Info.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
     </None>
+    <None Include="DisruptorUnity3d\LICENSE" />
+    <None Include="SimpleJson\LICENSE" />
+    <None Include="WebSocketServer\LICENSE" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

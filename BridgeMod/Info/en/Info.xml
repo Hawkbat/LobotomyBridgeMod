@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<info>
+	<name>Lobotomy Bridge</name>
+	<descs>
+		<desc>Allows external programs to retrieve data from or send commands to the game.
+Connect to the WebSocket server at ws://localhost:8787 while the game is running.
+
+Author: Hawkbar
+		</desc>
+	</descs>
+</info>

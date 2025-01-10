@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E19B8255-6E79-4811-A567-F591CE3B875A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BridgeMod</RootNamespace>
+    <AssemblyName>BridgeMod</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NoStdLib>true</NoStdLib>
+    <TargetFrameworkProfile />
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Programs\Steam\steamapps\common\LobotomyCorp\LobotomyCorp_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+      <SpecificVersion>true</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\Programs\Steam\steamapps\common\LobotomyCorp\LobotomyCorp_Data\Managed\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Programs\Steam\steamapps\common\LobotomyCorp\LobotomyCorp_Data\Managed\mscorlib.dll</HintPath>
+      <Private>False</Private>
+      <SpecificVersion>true</SpecificVersion>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\Programs\Steam\steamapps\common\LobotomyCorp\LobotomyCorp_Data\Managed\System.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\Programs\Steam\steamapps\common\LobotomyCorp\LobotomyCorp_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\Programs\Steam\steamapps\common\LobotomyCorp\LobotomyCorp_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BridgeData.cs" />
+    <Compile Include="BridgeMessage.cs" />
+    <Compile Include="BridgeMod.cs" />
+    <Compile Include="BridgeServer.cs" />
+    <Compile Include="DisruptorUnity3d\RingBuffer.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Harmony_Patch.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleJson\SimpleJson.cs" />
+    <Compile Include="WebSocketServer\IWebSocketLogger.cs" />
+    <Compile Include="WebSocketServer\WebSocketConnection.cs" />
+    <Compile Include="WebSocketServer\WebSocketProtocol.cs" />
+    <Compile Include="WebSocketServer\WebSocketServer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BridgeMod.csproj.user" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

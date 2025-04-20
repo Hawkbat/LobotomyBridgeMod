@@ -1,3 +1,7 @@
+
+> [!CAUTION]
+> This project is still in an early state and most of the game interactions have not been implemented yet. It is not ready for practical use.
+
 # Lobotomy Bridge Mod
 
 ![Lobotomy Corp Bridge logo](logo.png)
